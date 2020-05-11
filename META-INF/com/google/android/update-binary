@@ -387,19 +387,18 @@ if [ $? != 0 -o -z "$(ls bin)" ]; then
   abort "Busybox setup failed. Aborting...";
 fi;
 
-if [ -f banner ]; then
-  ui_printfile banner;
-  ui_print " " " ";
-fi;
+ui_print " =====================================";
+ui_print "|                                     |";
+ui_print "|    |  |   __   °  _|_               |";
+ui_print "|    |  |  |  |  |   |   |/\  |  \/   |";
+ui_print "|    |__|  |  |  |   |   |    |  /\   |";
+ui_print "|                                     |";
+ui_print " =====================================";
+ui_print "$(file_getprop anykernel.sh kernel.string)";
+ui_print "=======================================";
+ui_print "AnyKernel3 by osm0sis @ xda-developers";
+ui_print "=======================================";
 
-KERNEL_STRING="$(file_getprop anykernel.sh kernel.string)";
-ui_print "$KERNEL_STRING";
-if [ -f version ]; then
-  ui_print " ";
-  ui_printfile version;
-  ui_print " ";
-fi;
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
 
 setup_env;
 
@@ -423,6 +422,12 @@ restore_env;
 if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
-
+ui_print " " " " "Unitrix was Succesfully Installed";
+ui_print " =====================================";
+ui_print "|      \    /      /\      \    /     |";
+ui_print "|       \  /      /  \      \  /      |";
+ui_print "|        ||      /----\      ||       |";
+ui_print "|        ||     /      \     ||       |";
+ui_print " =====================================";
 ui_print " " " " "Enjoy the Cosmic Era beech lol";
 ui_print " " " " "Done!";

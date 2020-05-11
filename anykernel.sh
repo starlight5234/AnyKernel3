@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Unitrix Kernel by Starlight @star2834 Telegram
+kernel.string=Unitrix Kernel by Starlight @star2834 TG
 do.devicecheck=1
 do.modules=0
 do.systemless=1
