@@ -1,6 +1,6 @@
 NAME ?= Unitrix-Kernel
 DATE := $(shell date "+%d%m%Y-%I%M")
-VERSION := 4.9-$(LINUX_VERSION)
+VERSION := $(KERN_VER)
 
 SZIP := $(NAME)-$(VERSION)-STABLE-$(DATE).zip
 BZIP := $(NAME)-$(VERSION)-BETA-$(DATE).zip
