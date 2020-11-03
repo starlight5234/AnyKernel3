@@ -4,15 +4,15 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=StormBreaker Kernel
-maintainer.string1=Starlight TG:@star2834
-maintainer.string2=Saalim Quadri, Team StormBreaker Head
+kernel.string=PA-common Kernel
+maintainer.string1=Starlight & Gagan
+maintainer.string2=Team Paranoid Android
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=vince
+device.name1=mido
 supported.versions=
 supported.patchlevels=
 '; } # end properties
