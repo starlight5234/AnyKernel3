@@ -1,31 +1,22 @@
-NAME ?= Stormbreaker
+NAME ?= Starlight-Kernel
+DATE := $(shell date "+%d%m%Y-%I%M")
+VERSION := $(KERN_VER)
 
-DATE := $(shell date "+%Y%m%d-%H%M")
+ZIP := $(NAME)-$(VERSION)-$(DATE).zip
 
-DEVICE := $(shell echo "${DEVICE}")
+EXCLUDE := Makefile *.git* *.jar* Star* *placeholder*
 
-KERNELVERSION := $(shell cat ../Makefile | grep VERSION | head -n 1 | sed "s|.*=||1" | sed "s| ||g")
-
-KERNELPATCHLEVEL := $(shell cat ../Makefile | grep PATCHLEVEL | head -n 1 | sed "s|.*=||1" | sed "s| ||g")
-
-ZIP := $(NAME)-$(KERNELVERSION).$(KERNELPATCHLEVEL)-$(DEVICE)-$(DATE).zip
-
-EXCLUDE := Makefile *.git* *.jar* *placeholder* *.md*
-
-normal: $(ZIP)
+zip: $(ZIP)
 
 $(ZIP):
-	@echo "Creating ZIP: $(ZIP)"
+	@echo "Creating ZIP: $(SZIP)"
 	@zip -r9 "$@" . -x $(EXCLUDE)
 	@echo "Generating SHA1..."
 	@sha1sum "$@" > "$@.sha1"
 	@cat "$@.sha1"
 	@echo "Done."
-
-
+	
 clean:
 	@rm -vf *.zip*
 	@rm -vf zImage
-	@rm -vf Image*
-	@echo "Cleaned Up."
-
+	@echo "Done."
