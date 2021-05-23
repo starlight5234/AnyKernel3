@@ -4,18 +4,12 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=StormBreaker Kernel by starlight5234
-do.devicecheck=1
+kernel.string=StormBreaker
+do.devicecheck=0
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=citrus
-device.name2=citrus_global
-device.name3=citrus_india
-device.name4=citrus_eea
-device.name5=citrus_tr
-device.name6=citrus_ru
 '; }
 
 # shell variables
